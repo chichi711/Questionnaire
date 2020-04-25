@@ -18,15 +18,15 @@
             <h2>&nbsp&nbsp&nbsp貓狗喜好調查</h2>
             <form action="">
                 <h3>&nbsp&nbsp1.請問您的性別?</h3>
-                <div class="gender">
+                <div class="gender" onclick="clickEvent(this)">
                     <input type="radio" name="gender" id="male">
                     <label for="male">生理男</label>
                 </div>
-                <div class="gender">
+                <div class="gender" onclick="clickEvent(this)">
                     <input type="radio" name="gender" id="female">
                     <label for="female">生理女</label>
                 </div>
-                <div class="gender">
+                <div class="gender" onclick="clickEvent(this)">
                     <input type="radio" name="gender" id="other">
                     <label for="other">其他</label>
                 </div>
@@ -37,19 +37,17 @@
                 </span>
 
                 <h3>&nbsp&nbsp&nbsp3.您較喜歡貓或狗?</h3>
-                <div class="pet">
-                    <!-- 貓咪 -->
+                <div class="pet" onclick="clickEvent(this)">
                     <input type="radio" name="pet" id="cat">
-                    <img src="image/meetissai_2.jpg" alt="">
+                    <img src="image/meetissai_2.jpg" alt="貓咪">
                 </div>
-                <div class="pet">
-                    <!-- 狗狗 -->
-                    <input type="radio" name="pet" id="dog">
-                    <img src="image/images.jpg" alt="">
+                <div class="pet" onclick="clickEvent(this)">
+                    <input onclick="this.checked=false" type="radio" name="pet" id="dog">
+                    <img src="image/images.jpg" alt="狗狗">
                 </div>
                 <br><br>
                 <div id="submit">
-                    <input type="submit" value="按此提交">
+                    <input disabled type="submit" value="按此提交">
                 </div>
                 <br>
 
@@ -57,11 +55,14 @@
         </div>
     </div>
     <script>
-        let optDog = document.querySelector("#dog");
-        optDog.onclick = () => {
-            alert("不給你選狗狗~~ ψ(｀∇´)ψ");
-            optDog.checked = false;
-        };
+        const clickEvent = (e) => {
+            let input = e.querySelector('input');
+            if (input.id == 'dog') {
+                alert("不給你選狗狗~~ ψ(｀∇´)ψ");
+            } else {
+                input.checked = true;
+            }
+        }
     </script>
 </body>
 
