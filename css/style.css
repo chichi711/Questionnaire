@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+body {
+    font-size: 1rem;
+    background-image: url("../image/hLVzJ0j.jpg");
+    background-size: cover;
+}
+.main {
+    border-style: ridge;
+    width: 50%;
+    background-size: 75%;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 0 auto;
+    color: rgb(80, 1, 1);
+    font-family: 'cwTeXYen', sans-serif;
+    min-width: 300px;
+}
+#image {
+    width: 100%;
+}
+.gender {
+    min-width: 250px;
+    display: inline-block;
+    border-width: thin;
+    border-style: solid;
+    width: 45%;
+    margin-left: 3%;
+    margin-top: 1%;
+    font-size: 20px;
+    outline-color: brown;
+}
+.gender:hover {
+    background-color: rgb(193, 212, 248);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -o-transition: background-color 1s;
+    -moz-transition: background-color 0.5s;
+}
+.age {
+    margin-left: 5%;
+}
+.age>span{
+    margin-left: -40px;
+}
+.age>input {
+    border-style: none none solid none;
+    width: 75%;
+}
+.pet{
+    display: inline-block;
+}
+.pet>img {
+    width: 250px;
+    height: 200px;
+}
+#submit {
+    text-align: center;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>假問卷真曬貓</title>
+    <link rel="icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <img src="image/t.jpg" alt="" id="image">
+        </div>
+        <div>
+            <h2>&nbsp&nbsp&nbsp貓狗喜好調查</h2>
+            <form action="">
+                <h3>&nbsp&nbsp1.請問您的性別?</h3>
+                <div class="gender">
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">生理男</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">生理女</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" name="gender" id="other">
+                    <label for="other">其他</label>
+                </div>
+                <h3>&nbsp&nbsp&nbsp2.請問您今年幾歲?</h3>
+                <span class="age">
+                    <input type="number" placeholder="請填入數字">
+                    <span>歲</span>
+                </span>
+
+                <h3>&nbsp&nbsp&nbsp3.您較喜歡貓或狗?</h3>
+                <div class="pet">
+                    <!-- 貓咪 -->
+                    <input type="radio" name="pet" id="cat">
+                    <img src="image/meetissai_2.jpg" alt="">
+                </div>
+                <div class="pet">
+                    <!-- 狗狗 -->
+                    <input type="radio" name="pet" id="dog">
+                    <img src="image/images.jpg" alt="">
+                </div>
+                <br><br>
+                <div id="submit">
+                    <input type="submit" value="按此提交">
+                </div>
+                <br>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        let optDog = document.querySelector("#dog");
+        optDog.onclick = () => {
+            alert("不給你選狗狗~~ ψ(｀∇´)ψ");
+            optDog.checked = false;
+        };
+    </script>
+</body>
+
+</html>
